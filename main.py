@@ -73,8 +73,6 @@ def find_assoc_rules(receipts, threshold, count_min=1):
     for itemset in receipts:
         update_pair_counts(pair_counts, itemset)
         update_item_counts(item_counts, itemset)
-    print(pair_counts)
-    print(item_counts)
     return filter_rules_by_conf(pair_counts, item_counts, threshold, count_min)
 
 
